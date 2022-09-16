@@ -1,24 +1,15 @@
-export class Validator {
-  constructor(name) {
-    this.name = name;
+export function search(numb) {
+  if (/[()]/.test(numb)) {
+    numb = numb.replace(/[()]/g, "");
   }
-  validateUsername(name) {
-    if(/[^\w_-]/.test(name)){
-      return false
-    }
-    if(/\d{4,}/.test(name)){
-      return false
-    }
-    if(/^[\d_-].*[\d_-]$/.test(name)){
-      return false
-    }
-    if(/^[\d_-].*$/.test(name)){
-      return false
-    }
-    if(/^.*[\d_-]$/.test(name)){
-      return false
-    }
-    return true
+  if(/[ ]/.test(numb)) {
+    numb = numb.replace(/ /g, "");
   }
+  if(/[-]/.test(numb)) {
+    numb = numb.replace(/-/g, "");    
+  }
+  if(!/^[+]/.test(numb)) {
+    numb = numb.replace(/^/g, "+");    
+  }  
+  return numb
 }
-export const eks1 = new Validator()

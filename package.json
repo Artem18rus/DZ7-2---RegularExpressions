@@ -1,5 +1,5 @@
 {
-  "name": "dz7-1---regularexpressions",
+  "name": "dz7-2---regularexpressions",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Artem18rus/DZ7-1---RegularExpressions.git"
+    "url": "git+https://github.com/Artem18rus/DZ7-2---RegularExpressions.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Artem18rus/DZ7-1---RegularExpressions/issues"
+    "url": "https://github.com/Artem18rus/DZ7-2---RegularExpressions/issues"
   },
-  "homepage": "https://github.com/Artem18rus/DZ7-1---RegularExpressions#readme",
+  "homepage": "https://github.com/Artem18rus/DZ7-2---RegularExpressions#readme",
   "devDependencies": {
     "@babel/cli": "^7.18.10",
     "@babel/core": "^7.19.0",

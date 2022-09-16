@@ -1,25 +1,21 @@
-import { Validator, eks1 } from '../regular.js';
+import { search } from '../regular.js';
 
-test('TEST-OK', () => {
-    expect(eks1.validateUsername('sdfgsdf')).toBe(true);
+test('TEST-OK1', () => {
+    const totalNumb = search('3300 00 0000');
+    expect(totalNumb).toBe('+3300000000');
 });
 
-test('TEST-ERR1', () => {
-    expect(eks1.validateUsername('sdfgsdfЮ')).toBe(false);
+test('TEST-OK2', () => {
+    const totalNumb = search('3(300) 00 0000');
+    expect(totalNumb).toBe('+3300000000');
 });
 
-test('TEST-ERR2', () => {
-    expect(eks1.validateUsername('sdfgsdf5555')).toBe(false);
+test('TEST-OK3', () => {
+    const totalNumb = search('3300-00-0000');
+    expect(totalNumb).toBe('+3300000000');
 });
 
-test('TEST-ERR3', () => {
-    expect(eks1.validateUsername('-sdfgsdf5')).toBe(false);
-});
-
-test('TEST-ERR4', () => {
-    expect(eks1.validateUsername('-sdfgsdf')).toBe(false);
-});
-
-test('TEST-ERR5', () => {
-    expect(eks1.validateUsername('sdfgsdf5')).toBe(false);
+test('TEST-OK4', () => {
+    const totalNumb = search('+3300000000');
+    expect(totalNumb).toBe('+3300000000');
 });
